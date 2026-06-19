@@ -2,18 +2,6 @@
 """
 extract_sections.py v2 — IEEE Paper Section Extractor
 Optimized for SRDS / IEEE Xplore two-column PDFs.
-
-CORREÇÕES v2 (sobre v1):
-  • ÍNDICE UNIFICADO DE SEÇÕES: um único regex (âncora ^ com MULTILINE) controla
-    tanto a identificação quanto o fatiamento de limites — elimina o bug de
-    deslocamento de posição que colocava a Introdução na coluna de Conclusão.
-  • CONCLUSÃO buscada do FINAL do documento (último match), nunca do início.
-  • Variantes de título expandidas (EN + PT + combinações comuns).
-  • Stripping de footers estendido: cabeçalhos de página, avisos de manuscrito,
-    linhas ORCID/e-mail, headers de conferência após form-feeds.
-  • Form-feeds (\\x0c) do pdftotext convertidos em quebras duplas antes do processamento.
-  • Fallback de texto livre quando nenhum cabeçalho de seção numerado é encontrado.
-  • Remoção de linhas órfãs aprimorada sem descartar primeiro parágrafo curto válido.
 """
 
 import argparse

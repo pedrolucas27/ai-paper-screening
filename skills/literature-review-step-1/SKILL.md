@@ -33,16 +33,6 @@ Antes de iniciar a análise, verifique se o usuário forneceu **todas** as entra
 
 Se a planilha tiver colunas com nomes ligeiramente diferentes, codificação distinta (ex.: latin-1) ou delimitador diferente (`;` em vez de `,`), tente detectar e tratar automaticamente; se a ambiguidade persistir, pergunte ao usuário.
 
-## Calibração de domínio (antes de pontuar qualquer artigo)
-
-Antes de avaliar o primeiro artigo, faça internamente uma calibração — não pule esta etapa, mesmo sob pressão de tempo ou volume grande de artigos:
-
-1. **Identifique a área de pesquisa** implícita pelo Eixo 1 e pelo Eixo 2 (ex.: "fairness em machine learning", "epidemiologia de doenças negligenciadas", "consenso distribuído"). Se os eixos forem ambíguos ou genéricos demais para identificar uma área clara, pergunte ao usuário antes de seguir.
-2. **Defina, para este par específico de eixos, o que conta como evidência central, secundária e periférica** — ou seja, transforme as definições genéricas da tabela de pontuação (seção "Critérios de avaliação") em critérios concretos para este domínio. Por exemplo: para um Eixo 1 sobre "tolerância a falhas Bizantinas", evidência central é o artigo propor, avaliar ou comparar um mecanismo de tolerância a falhas Bizantinas; evidência periférica é citar o tema apenas como motivação ou trabalho futuro.
-3. **Aplique esses critérios calibrados de forma idêntica a todos os artigos do lote.** Não deixe o padrão de rigor variar entre o artigo 1 e o artigo 200 — releia mentalmente os critérios calibrados periodicamente durante a triagem para evitar deriva (drift), tanto para mais rigor quanto para menos.
-
-Essa calibração não precisa ser exposta ao usuário em detalhe, mas deve guiar consistentemente cada julgamento e pode ser refletida nas justificativas.
-
 ## Critérios de avaliação
 
 Avalie cada artigo lendo Título, Resumo e Palavras-chave e julgando a aderência **semântica** a cada um dos dois eixos temáticos (não faça apenas busca literal de strings — sinônimos, variações e termos relacionados contam). Um bom revisor deve ter conhecimento de domínio para identificar evidências conceituais relevantes, mesmo quando os artigos não mencionarem explicitamente os termos exatos dos eixos. Aplique os critérios calibrados na etapa de calibração de domínio — não o conceito genérico de "central/secundário/periférico" isolado do contexto da área.

@@ -93,13 +93,15 @@ Os quatro critérios têm **peso igual** entre si — nenhum domina os demais, d
 
 ### Critério C2 — Reprodutibilidade
 
-*Pergunta orientadora: as provas, algoritmos ou pseudocódigos são detalhados o suficiente para permitir reimplementação independente?*
+*Pergunta orientadora: as provas, algoritmos ou pseudocódigos são detalhados o suficiente para permitir reimplementação independente — ou o artigo referencia um repositório de armazenamento (código/dados) que comprove a disponibilidade dos artefatos?*
+
+Não é necessário que o código apareça explicitamente no corpo do artigo: uma referência clara a um repositório de armazenamento (ex.: link para GitHub, GitLab, Zenodo, Figshare, Open Science Framework, ou nota de "código disponível em...") já conta a favor desta nota, mesmo sem pseudocódigo ou prova detalhada no texto. As duas vias — detalhamento textual do método e disponibilização via repositório — são alternativas, não cumulativas: a presença de qualquer uma das duas, isoladamente, já sustenta a nota correspondente.
 
 | Nota | Critério |
 |---|---|
-| 2,5 | Provas, algoritmos ou pseudocódigos completos e detalhados (passo a passo, complexidade, parâmetros), suficientes para reimplementação independente sem contato com os autores; artefatos/código/dados disponibilizados somam a favor desta nota mas não são exigência única |
-| 1 | Algoritmo/prova presente, mas apenas parcialmente detalhado ou esboçado em alto nível — passos ou parâmetros omitidos, insuficiente para reimplementação confiável sem decisões adicionais do leitor |
-| 0 | Nenhum algoritmo, pseudocódigo ou prova fornecido — método descrito apenas em prosa |
+| 2,5 | Provas, algoritmos ou pseudocódigos completos e detalhados (passo a passo, complexidade, parâmetros), suficientes para reimplementação independente sem contato com os autores; **OU** o artigo indica um link/repositório de armazenamento (código e/ou dados) que comprove a disponibilidade dos artefatos do próprio trabalho |
+| 1 | Algoritmo/prova presente, mas apenas parcialmente detalhado ou esboçado em alto nível — passos ou parâmetros omitidos, insuficiente para reimplementação confiável sem decisões adicionais do leitor; **OU** há menção a repositório/artefatos, mas sem confirmação clara de que cobre o código/dados específicos do artigo (ex.: link genérico do laboratório/grupo de pesquisa, link quebrado ou inacessível, ou menção vaga sem URL/identificador concreto) |
+| 0 | Nenhum algoritmo, pseudocódigo ou prova fornecido no texto, **e** nenhum link/repositório de código ou dados indicado — método descrito apenas em prosa, sem evidência de disponibilização de artefatos |
 
 ### Critério C3 — Comparação com o Estado da Arte
 
@@ -190,7 +192,7 @@ Todas as colunas da planilha do Estágio 2, preservadas (inclusive `Score Stage 
 | `Score Stage 3 (0-1)` | Etapa 2 do cálculo (min-max sobre o lote, ou caso de borda `max == min`) |
 | `Score Geral (0-10)` | Etapa 3 do cálculo (combinação de `Score Stage 1` + `Score Stage 2` + `Score Stage 3`, pesos 0,20/0,30/0,50, convertida para escala 0–10, 2 casas decimais) |
 | `Posição Ranking` | Etapa 4 do cálculo (1 = melhor) |
-| `Justificativa` | Evidência textual concreta para cada um dos quatro critérios, identificando a seção de origem (qualquer seção do PDF íntegro — ex. Metodologia, Experimentos, Modelo de Falhas — ou Abstract/Introdução/Conclusão no caso de fallback) |
+| `Justificativa` | Evidência textual concreta para cada um dos quatro critérios, identificando a seção de origem (qualquer seção do PDF íntegro — ex. Metodologia, Experimentos, Modelo de Falhas — ou Abstract/Introdução/Conclusão no caso de fallback). Para C2, quando a nota vier (total ou parcialmente) de um link/repositório de código ou dados, cite o link/identificador encontrado e a seção onde ele aparece (ex. nota de rodapé, "Disponibilidade de Dados", Abstract) |
 
 **Formatação obrigatória:**
 - `Score Geral (0-10)`: gradiente de cor vermelho (0) → amarelo (5) → verde (10), via `ColorScaleRule`.
